@@ -1,0 +1,497 @@
+/*  File  to overwrite css of the theme  */
+
+/* Hide Recaptcha Badge */
+.grecaptcha-badge { visibility: hidden !important; }
+
+.header .header-main .logo-block img { height: 50px; }
+
+.page-layout-wiki-single .post-header .post-info { padding-top: 0; }
+
+.text-content a, .text-content a:active, .text-content a:focus, .text-content a:hover, .text-content a:visited { 
+    color: var(--brand-blue, #1577a9);
+    text-decoration-line: underline;
+    text-underline-offset: 2px;
+}
+.text-content a.parent-page-card, .text-content .toc-wrap a, .text-content .post-footer-nav a { text-decoration: unset; }
+
+.section-divider { padding-left: 0; padding-right: 0; }
+
+.acc-wrap table br {
+    display: block;
+}
+
+.text-content p {
+	font-size: 20px;
+	margin-bottom: 1.75rem;
+	font-weight: 400;
+}
+.table { font-weight: 400; }
+
+/* Customized table features */
+.table tr td img, .table tr th img { max-width: 100%; }
+
+table.nowrap { white-space: nowrap; }
+
+table.table.img32 tr td img { max-width: 32px; }
+
+table.table.img32-lastcol tr td:last-of-type img { max-width: 32px; } /* Applies 32px width to images only in last column of a table */
+table.table.img32-firstcol tr td:first-of-type img { max-width: 32px; } /* Applies 32px width to images only in 1st column of a table */
+
+table.grey thead th, table.grey tbody th {
+	border: 1px solid var(--25, #dfe6ed);
+	background-color: var(--grey, #f0f3f7);
+}
+table.grey thead td, table.grey tbody td {
+	background: #fff;
+}
+
+table.aligntop thead td, table.aligntop tbody td, table.aligntop tbody th { vertical-align: top; }
+
+table.evenwidth { table-layout: fixed; } /* Forces all table columns to span even widths for any # of columns */
+
+table.even-2col tr td, table.even-2col tr th { width: 50%; }
+
+table.widesecond tr td, table.widesecond tr th { width: 30%; }
+table.widesecond tr td:last-child, table.widesecond tr th:last-child { width: 70%; }
+
+table.widethird tr td, table.widethird tr th { width: 25%; }
+table.widethird tr td:last-child, table.widethird tr th:last-child { width: 50%; }
+
+.table.center { text-align: center; }
+
+.table.tbl-125img tr td img { max-width: 125px; }
+
+table.table.blockimg tr td img { display: block; text-align: center; margin: 0 auto; }
+
+.table-wrap { padding: 0px 0px; margin-top: 5px; }
+
+table.zebra tbody tr:nth-child(even) td {
+	background: #fafcfd;
+}
+
+/* Table TH H3 equivalent - heading within a row within another heading
+ * This is used for example on the individual Pokemon Pokedex pages
+ */
+.table tr th.thh3, .table tr td.thh3 { background-color: #f7f9fb; }
+
+
+/* 1st cell in a row is centered */
+table.table.td1center tr td:nth-child(1) {
+    text-align: center;
+}
+
+/* 2nd cell in a row is centered */
+table.table.td2center tr td:nth-child(2) {
+    text-align: center;
+}
+
+/* 3rd cell in a row is centered */
+table.table.td3center tr td:nth-child(3) {
+    text-align: center;
+}
+
+/* 1st cell in a row (1st table column) is all bolded text) */
+.bolded-1stcol td:first-child {
+    font-weight: 600;
+}
+
+/*
+ * Forces a maximum of 32px width on all image only in the 1st column 
+ * This is ideal for tables with sprites in the 1st column
+ */
+table.img32-1stcol tr td:first-child img { 
+  display: block;
+  margin: 0 auto;
+  max-width: 32px;
+}
+
+/* All images in 1st column are a max of 125px wide
+ * This is used mostly on gym leader pages
+ */
+table.img125-1stcol tr td:first-child img, table.img125-1stcol tr th:first-child img { 
+  max-width: 125px;
+}
+
+/*
+ * Table classes for move tables & Pokedex page
+ * Main Infobox table has its own widths
+ * Move table column widths remain consistent between 6-col or 7-col move tables
+ */
+
+/* Pokedex Infobox */
+.dextable-infobox th:nth-child(1), .dextable-infobox th:nth-child(1) {
+	width: 20%;
+}
+
+/* 7-col Moves Table is Level-up Learnset */
+.dextable-7cols th:nth-child(1), .dextable-7cols td:nth-child(1) {
+    width: 5%;  /* Level # */
+}
+.dextable-7cols th:nth-child(2), .dextable-7cols td:nth-child(2) {
+	width: 35%; /* Move Name */
+}
+.dextable-7cols th:nth-child(3), .dextable-7cols td:nth-child(3), .dextable-7cols th:nth-child(4), .dextable-7cols td:nth-child(4) {
+	width: 15%; /* Type + Category columns */
+}
+
+.dextable-7cols th:nth-child(5), .dextable-7cols td:nth-child(5), .dextable-7cols th:nth-child(6), .dextable-7cols td:nth-child(6), .dextable-7cols th:nth-child(7), .dextable-7cols td:nth-child(7) {
+	width: 10%; /* Power + Accuracy + PP */
+}
+
+/* 6-col Moves Table is Level-up Learnset */
+.dextable-6cols th:nth-child(1), .dextable-6cols td:nth-child(1) {
+    width: 40%;  /* Move Name */
+}
+.dextable-6cols th:nth-child(2), .dextable-6cols td:nth-child(2), .dextable-6cols th:nth-child(3), .dextable-6cols td:nth-child(3) {
+	width: 15%; /* Type + Category columns */
+}
+.dextable-6cols th:nth-child(4), .dextable-6cols td:nth-child(4), .dextable-6cols th:nth-child(5), .dextable-6cols td:nth-child(5), .dextable-6cols th:nth-child(6), .dextable-6cols td:nth-child(6) {
+	width: 10%; /* Power + Accuracy + PP */
+}
+
+/** Table show/hide links toggleable tables **/
+span.table-toggle { display: block; }
+span.table-toggle a.toggle-link { font-size: 0.85em; }
+
+/* When table is collapsed */
+.table.collapsed tbody {
+  display: none;
+}
+
+
+
+h1.page-title { margin-bottom: 20px; }
+
+.toc ul {
+	list-style-type: none;
+    padding: 0;
+    position: relative;
+	padding-top: 5px;
+}
+.toc ul li {
+	padding-left: .75em;
+    position: relative;
+	margin-bottom: 0;
+	padding-bottom: 5px;
+}
+.toc ul li a {
+    color: #5a6674;
+    display: inline-block;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: .16px;
+    line-height: 1.25;
+    margin: 6px 0;
+}
+.toc ul li:before {
+	background: #ccc;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1px;
+}
+.toc p:empty {
+	display: none;
+}
+.toc ul li ul, .tol ul li ul li ul, .toc ul li ul li ul li ul {
+	padding-left: 1.1em;
+}
+.text-content .toc ul li a:visited { color: #5a6674; }
+.text-content .toc ul li a:hover, .text-content .toc ul li a:active { color: var(--brand-blue, #1577a9); }
+
+
+/* Updates to horizontal rule */
+.text-content hr {
+    border: 0;
+    display: inline-block;
+    margin-bottom: 24px;
+    margin-top: 24px;
+	padding-left: 0;
+    padding-right: 0;
+}
+
+.text-content hr:before {
+	background-color: var(--dark-grey, #dfe6ed);
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+}
+
+
+.callout-box {
+    align-items: center;
+	font-weight: 400;
+    background: #f0f7ff;
+    /*display: flex;
+    justify-content: flex-start; */
+    margin: 20px 0;
+    padding: 18px 24px;
+    padding-left: 65px;
+    background-image: url('../img/callout-icon.png');
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: 15px;
+}
+
+.featured-item .col-info { padding: 12px 24px; }
+.featured-item .col-info .title {
+	font-weight: 800;
+	color: #3b424a;
+}
+.featured-item .caption {
+	font-size: 16px;
+}
+.featured-item .col-image {
+	width: unset;
+	max-width: 125px;
+}
+.featured-item .col-image img { height: unset; }
+
+
+/* Base style for all Pokemon "type" spans */
+.type {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  margin-right: 3px;
+  margin-bottom: 3px;
+  /* min-width: 70px; */
+}
+.type, .table .type.normal { font-size: 0.8rem; } 
+/* Add the selector above becase we have a rule for .table .normal for a table style
+ * This overwrites the .normal font setting only for the Pokemon type container with this class
+ */
+
+/* Normal Type */
+.normal {
+  background: linear-gradient(180deg, #A8A878 0%, #8A8A59 100%);
+}
+
+/* Fire Type */
+.fire {
+  background: linear-gradient(180deg, #F08030 0%, #DD6610 100%);
+}
+
+/* Water Type */
+.water {
+  background: linear-gradient(180deg, #6890F0 0%, #386CEB 100%);
+}
+
+/* Electric Type */
+.electric {
+  background: linear-gradient(180deg, #F8D030 0%, #F0C108 100%);
+  color: #333; /* Darker text for visibility */
+}
+
+/* Grass Type */
+.grass {
+  background: linear-gradient(180deg, #78C850 0%, #5CA935 100%);
+}
+
+/* Ice Type */
+.ice {
+  background: linear-gradient(180deg, #98D8D8 0%, #69C6C6 100%);
+}
+
+/* Fighting Type */
+.fighting {
+  background: linear-gradient(180deg, #C03028 0%, #9D2721 100%);
+}
+
+/* Poison Type */
+.poison {
+  background: linear-gradient(180deg, #A040A0 0%, #803380 100%);
+}
+
+/* Ground Type */
+.ground {
+  background: linear-gradient(180deg, #E0C068 0%, #D4A82F 100%);
+}
+
+/* Flying Type */
+.flying {
+  background: linear-gradient(180deg, #A890F0 0%, #9180C4 100%);
+}
+
+/* Psychic Type */
+.psychic {
+  background: linear-gradient(180deg, #F85888 0%, #F61C5D 100%);
+}
+
+/* Bug Type */
+.bug {
+  background: linear-gradient(180deg, #A8B820 0%, #8B9A1B 100%);
+}
+
+/* Rock Type */
+.rock {
+  background: linear-gradient(180deg, #B8A038 0%, #93802D 100%);
+}
+
+/* Ghost Type */
+.ghost {
+  background: linear-gradient(180deg, #705898 0%, #554374 100%);
+}
+
+/* Dragon Type */
+.dragon {
+  background: linear-gradient(180deg, #7038F8 0%, #4C08EF 100%);
+}
+
+/* Dark Type */
+.dark {
+  background: linear-gradient(180deg, #705848 0%, #513F34 100%);
+}
+
+/* Steel Type */
+.steel {
+  background: linear-gradient(180deg, #B8B8D0 0%, #9797BA 100%);
+}
+
+/* Fairy Type */
+.fairy {
+  background: linear-gradient(180deg, #EE99AC 0%, #E77F95 100%);
+}
+
+
+.post-footer-nav div {
+    display: flex;
+    flex: 1;
+    gap: 14px;
+}
+
+.post-footer-nav .nextlink span.icon {
+	background-image: url('../img/arrow-right-next.png');
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.post-footer-nav .prevlink span.icon {
+	background-image: url('../img/arrow-left-prev.png');
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.post-footer-nav .nav-link.nav-link--next .info { text-align: right; }
+
+
+.post-simple__info .taxonomy-type .icon img, .post-simple__info .taxonomy-type .icon svg { background-color: unset; }
+
+/* Unbound Contact Form */
+.wpcf7 form input, .wpcf7 form textarea {
+	padding: 10px 15px;
+	border: 1px solid #cacaca;
+}
+
+
+
+/* Page title header changes */
+.page-layout-wiki-single .post-header { padding-top: 20px; padding-bottom: 20px; }
+
+
+
+/*Mediavine Spacing--------*/
+.content_mobile_wrapper, .recipe_mobile_wrapper, .comments_mobile_wrapper, .comments_btf_wrapper, .comments_mobile_wrapper, .content_btf_wrapper, .feed_mobile_wrapper, .feed_btf_wrapper {
+	margin-bottom: 100px !important;
+    margin-top: 100px !important;
+}
+
+.mv-ad-box {
+	margin-top: 75px !important;	
+	margin-bottom: 75px !important;
+	background-color: #fff !important;
+	/* hide border for now 
+	border-top: 1px solid #f0f0f0;
+	border-bottom: 1px solid #f0f0f0;
+	** end hide border */
+}
+
+.mv-ad-box:before {
+	letter-spacing: 0 !important;
+	font-size: 10px !important;
+}
+
+.mv-ad-box .rail-frame, .mv-ad-box .mv-rail-frame, .mv-ad-box .mv-rail-frame-400, .mv-ad-box .mv-rail-frame-440 {	background-color: #fff !important; }
+.mv-ad-box .adunitwrapper.mv-native-size { background-color: #fff !important; }
+
+/*
+ * This adds my own manual text above MV blocks
+ * If we enable MV's custom text, hide this block
+.content .adunitwrapper:before {
+    content: "ADVERTISEMENT";
+    font-size: 10px;
+    color: #bcbfc5;
+}
+*/
+
+/*--------End Mediavine Spacing*/
+
+
+
+@media (max-width: 767px) {
+	/* Updates to the Prev/Next links for smaller screens */
+    .post-footer-nav {
+	    padding-left: 0px;
+        padding-right: 0px;
+        flex-direction: column;
+		align-items: normal;
+	}
+}
+
+/* Adjusts the thumbnail image for mobile to be smaller and to the right */
+@media (max-width: 640px) {
+	
+	/* Flex layout option that forces the thumbnail to the right
+	 * This works, but it will not allow wrapping
+	 * So headline text will be its own column and cannot wrap below the thumbnail
+	 *
+	.page-layout-wiki-single .post-header .thumbnail { display: unset; order: 2; min-width: 40px; max-width: 90px; margin-top: 5px; }
+	.page-layout-wiki-single .post-header { flex-direction: unset; }
+	.page-layout-wiki-single .post-header .post-info { flex: 1; order: 1; }
+	*/
+	
+	/* Block layout with float clearfix, this does the same but allows wrapping below the thumbnail */
+	.page-layout-wiki-single .post-header { display: block; }
+	.page-layout-wiki-single .post-header .thumbnail { float: right; min-width: 40px; max-width: 90px; margin-top: 5px; margin-left: 20px; }
+	.page-layout-wiki-single .post-header::after { content: ''; display: block; clear: both; } /* Clearfix CSS */
+	
+	
+	/* Adjusts Pokedex Infobox 1st column heading width to be larger on smaller screens */
+	.dextable-infobox th:nth-child(1), .dextable-infobox th:nth-child(1) {
+		width: 30%;
+	}
+}
+
+@media (max-width: 480px) {
+	/* Updates to the Walkthrough listing boxes/link boxes to center everything on mobile */
+	.featured-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 0;
+    }
+	.featured-item .col-info {
+		text-align: center;
+	}
+	.featured-item .col-image {
+		max-width: unset;
+		display: flex;
+    	justify-content: center;
+    	align-items: flex-start;
+    	aspect-ratio: unset;
+	}
+	.featured-item .col-image img {
+		max-width: 125px;
+	}
+	.featured-item .caption, .featured-item .col-info .title {
+		width: 100%;
+	}
+}

@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+scripts.pubnation.com	TRUE	/	FALSE	1999999999	AWSALB	mAi/MJcx8Rqn7Drx8+LuHAKQuHU9jP3uPZMP8qfAPsFVFqi0QTCL/g5zu3WP3OaH1NiI+81WresJFKDnsg+uPs8tanlDS9rxCY3FfBOACrdBtn5IsDNrLBfvgrJ1
+scripts.pubnation.com	TRUE	/	FALSE	1999999999	AWSALBCORS	mAi/MJcx8Rqn7Drx8+LuHAKQuHU9jP3uPZMP8qfAPsFVFqi0QTCL/g5zu3WP3OaH1NiI+81WresJFKDnsg+uPs8tanlDS9rxCY3FfBOACrdBtn5IsDNrLBfvgrJ1
+scripts.pubnation.com	TRUE	/	FALSE	1999999999	SameSite	None
+
